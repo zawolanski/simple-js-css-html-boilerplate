@@ -8,13 +8,20 @@
     "postcss": "postcss -u autoprefixer cssnano --no-map -r dist/styles/*.css",
     "build:css": "npm run scss && npm run postcss",
     "html": "posthtml -c posthtml.config.json",
+    "babel": "babel src/js -d dist/js --presets @babel/preset-env",
+    "babel-minify": "npm run babel && minify dist/js -d dist/js",
     "watch:html": "onchange -i '*.html' 'src/modules/' -- npm run html",
-    "watch:scss": "onchange -i src/styles/ -- npm run scss"
+    "watch:scss": "onchange -i src/styles/ -- npm run scss",
+    "watch:js": "onchange -i 'src/js/' -- npm run babel"
   },
   "author": "Sebastian Zawołański",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "autoprefixer": "^10.1.0",
+    "babel-minify": "^0.5.1",
     "cssnano": "^4.1.10",
     "node-sass": "^5.0.0",
     "onchange": "^7.1.0",
