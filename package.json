@@ -4,8 +4,16 @@
   "description": "HTML, CSS, JS boilerplate to create simple and easy apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "html": "posthtml -c posthtml.config.json",
+    "watch:html": "onchange -i '*.html' 'src/modules/' -- npm run html"
   },
   "author": "Sebastian Zawołański",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "posthtml": "^0.15.1",
+    "posthtml-cli": "^0.9.1",
+    "posthtml-expressions": "^1.7.1",
+    "posthtml-include": "^1.6.0",
+    "posthtml-modules": "^0.6.4"
+  }
 }

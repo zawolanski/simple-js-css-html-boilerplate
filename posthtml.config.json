@@ -1,0 +1,14 @@
+{
+    "input": "*.html",
+    "output": "dist",
+    "plugins": {
+        "posthtml-modules": {
+            "root": "./src/modules",
+            "initial": true
+        },
+        "posthtml-include": {
+            "root": "./src/modules"
+        },
+        "posthtml-expressions": {}
+    }
+}
