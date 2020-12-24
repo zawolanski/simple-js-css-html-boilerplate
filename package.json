@@ -4,12 +4,22 @@
   "description": "HTML, CSS, JS boilerplate to create simple and easy apps",
   "main": "index.js",
   "scripts": {
+    "scss": "node-sass src/styles -o dist/styles",
+    "postcss": "postcss -u autoprefixer cssnano --no-map -r dist/styles/*.css",
+    "build:css": "npm run scss && npm run postcss",
     "html": "posthtml -c posthtml.config.json",
-    "watch:html": "onchange -i '*.html' 'src/modules/' -- npm run html"
+    "watch:html": "onchange -i '*.html' 'src/modules/' -- npm run html",
+    "watch:scss": "onchange -i src/styles/ -- npm run scss"
   },
   "author": "Sebastian Zawołański",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "node-sass": "^5.0.0",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
     "posthtml": "^0.15.1",
     "posthtml-cli": "^0.9.1",
     "posthtml-expressions": "^1.7.1",
