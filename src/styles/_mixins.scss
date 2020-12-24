@@ -1,0 +1,19 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flex($hor: true, $ver: true, $column: false) {
+    display: flex;
+    @if $hor {
+        justify-content: center;
+    }
+
+    @if $ver {
+        align-items: center;
+    }
+
+    @if $column {
+        flex-direction: column;
+    }
+}

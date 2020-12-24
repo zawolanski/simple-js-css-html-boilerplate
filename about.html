@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <module href="/head.html"></module>
+</head>
+<body>
+    <include locals='{"currentPage": "about"}' src="./header.html"></include>
+    <main class="main">
+        <div class="main__container">
+            <module href="/title.html">Dependencies</module>
+            <ul>
+                <include locals='{"data": [["babel", "@babel/cli", "@babel/core", "@babel/preset-env", "babel-minify"],
+                "browser-sync", "node-sass", "onchange", "parallelshell", 
+                ["posthtml", "posthtml-cli", "posthtml-expressions", "posthtml-include", "posthtml-modules"], 
+                ["PostCSS", "postcss-cli", "autoprefixer", "cssnano"]]}' src="./list.html"></include>
+            </ul>
+        </div>
+    </main>
+</body>
+<script async src="./js/index.js"></script>
+</html>

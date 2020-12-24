@@ -1,0 +1,16 @@
+<each loop="item in data">
+        <if condition="typeof item !== 'string'">
+            <li>
+                {{ item[0] }}
+                <ul>
+                    <each loop="item in [...item]">
+                        <if condition="!loop.first"><li>{{ item }}</li></if>
+                    </each>
+                </ul>
+            </li>
+        </if>
+    <else>
+        <li>{{ item }}</li>
+    </else>
+</each>
+</li>

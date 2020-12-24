@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <module href="/head.html"></module>
+</head>
+<body>
+    <include locals='{"currentPage": "main"}' src="./header.html"></include>
+    <main class="main">
+        <div class="main__container">
+            <module href="/title.html">Features</module>
+            <ul>
+                <li>Live reloading with <strong>browser-sync</strong> on 3000 port,</li>
+                <li>SCSS to CSS transpilation, autoprefixing, optimization, and minification,</li>
+                <li>ES6+ to ES5 transpilation and minification,</li>
+                <li>Write your own HTML modules and import them to pages located in <code>src</code> folder, pass 'props' to modules and use expressions</li>
+            </ul>
+            <module href="/title.html">Usage</module>
+            <ul>
+                <li>Write your HTML pages in  <code>/</code> folder</li>
+                <li>Write your SCSS code in <code>src/styles</code> folder</li>
+                <li>Write your JS code in <code>src/js</code> folder</li>
+                <li>Write your HTML modules in <code>src/modules</code> folder</li>
+            </ul>
+            <module href="/title.html">Available commands</module>
+            <ul>
+                <li><code>npm start</code> - command starts your project. SCSS is parsing to CSS, JS isn't minified and HTML is compiled,</li>
+                <li><code>npm run build:all</code> - command builds our application.
+                    <ul>
+                        <li>CSS is minified, transpiled and optimazed,</li>
+                        <li>JS is minified and transpiled,</li>
+                        <li>HTML is compiled,</li>
+                    </ul>
+                </li>
+            </ul>
+            <module href="/title.html">HTML Modules - <a href="https://github.com/posthtml/posthtml">posthtml</a></module>
+            <p>Applied plugins</p>
+            <ul>
+                <li>posthtml-expression - <a href="https://github.com/posthtml/posthtml-expressions">link</a></li>
+                <li>posthtml-modules - <a href="https://github.com/posthtml/posthtml-modules">link</a></li>
+                <li>posthtml-include - <a href="https://github.com/posthtml/posthtml-include">link</a></li>
+            </ul>
+        </div>
+    </main>  
+</body>
+<script async src="./js/index.js"></script>
+</html>
