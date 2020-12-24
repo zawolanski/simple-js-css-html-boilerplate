@@ -38,5 +38,11 @@
     "posthtml-expressions": "^1.7.1",
     "posthtml-include": "^1.6.0",
     "posthtml-modules": "^0.6.4"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "last 2 versions",
+    "not dead",
+    "> 0.2%"
+  ]
 }
