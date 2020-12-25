@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+
+*{
+    box-sizing: border-box;
+}
+
+p, ul, h1 {
+    @include reset();
+}
+
+body {
+    @include reset();
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}
+
+h2.title {
+    font-size: 25px;
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: 12px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+@import 'content';
+@import 'header';
