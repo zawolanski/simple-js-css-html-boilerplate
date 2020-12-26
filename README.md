@@ -20,9 +20,9 @@ HTML, CSS, JS boilerplate to create simple and easy apps
 
 1. `npm start` - command starts your project. SCSS is parsing to CSS, JS isn't minified and HTML is compiled
 1. `npm run build:all` - command builds our application.
-1. CSS is minified, transpiled and optimazed
-1. JS is minified and transpiled
-1. HTML is minified and compiled
+    1. CSS is minified, transpiled and optimazed
+    1. JS is minified and transpiled
+    1. HTML is minified and compiled
 
 ## HTML Modules - [posthtml](https://github.com/posthtml/posthtml)
 
